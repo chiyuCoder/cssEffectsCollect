@@ -1,0 +1,51 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    background: #000;
+}
+
+section .screen {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 2;
+    overflow: hidden;
+    transition: .6s all ease-in-out;
+    cursor: pointer;
+}
+
+section .screen:nth-child(1) {
+    background: #222;
+}
+
+section .screen:nth-child(2) {
+    background: #3895df;
+}
+
+section .screen:nth-child(3) {
+    background: #f4a524;
+}
+
+section .screen .content {
+    width: 900px;
+    padding: 40px;
+    background: white;
+    transition: .5s all ease;
+
+    box-sizing: border-box;
+    transform: translateX(100%);
+}
+
+section .screen:hover .content {
+    transform: translateX(0);
+    transition-delay: .4s;
+}
