@@ -1,0 +1,121 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, #24006b, #f42f8c);
+}
+
+.creative-button {
+    padding: 30px 60px;
+    border-radius: 8%;
+    background-color: #24006b;
+    color: white;
+    font-size: 40px;
+    position: relative;
+    overflow: hidden;
+    outline: 0;
+}
+
+.creative-button::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.05)
+}
+
+.creative-button .border {
+    position: absolute;
+
+}
+
+@keyframes rightward {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes downward {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes leftward {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes upward {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.creative-button .border:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0c002b, #1779ff, #0c002b);
+    transform: translateX(-100%);
+    animation: rightward 2s ease-in infinite;
+}
+
+.creative-button .border:nth-child(2) {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, #0c002b, #1779ff, #0c002b);
+    transform: translateY(-100%);
+    animation: downward 2s ease-in infinite 2s;
+}
+
+.creative-button .border:nth-child(3) {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0c002b, #1779ff, #0c002b);
+    transform: translateX(100%);
+    animation: leftward 2s ease-in infinite 4s;
+}
+
+.creative-button .border:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #0c002b, #1779ff, #0c002b);
+    transform: translateY(100%);
+    animation: upward 2s ease-in infinite 6s;
+}
