@@ -13,6 +13,8 @@ section {
 }
 
 section .screen {
+    /* if not set flex-basis, flex-grow does not has any effect */
+    flex-basis: 200px;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -36,7 +38,6 @@ section .screen:nth-child(3) {
 }
 
 section .screen .content {
-    width: 900px;
     padding: 40px;
     background: white;
     transition: .5s all ease;
@@ -45,7 +46,17 @@ section .screen .content {
     transform: translateX(100%);
 }
 
+section:hover .screen {
+
+    opacity: 0.2;
+}
+
+section .screen:hover {
+    flex-grow: 5;
+    opacity: 1;
+}
+
 section .screen:hover .content {
     transform: translateX(0);
-    transition-delay: .4s;
+    transition-delay: .3s;
 }

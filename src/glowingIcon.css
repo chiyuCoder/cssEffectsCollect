@@ -1,0 +1,32 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-image: radial-gradient(circle, #0565f4, #75cf65);
+    transition: 0.5s all ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6em;
+}
+
+.icon-box:hover {
+    font-size: 8em;
+    box-shadow: 0 0 82px 10px #75cf65;
+    color: white;
+}
