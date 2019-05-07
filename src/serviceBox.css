@@ -1,0 +1,39 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: azure;
+}
+
+.card {
+    width: 300px;
+    padding: 60px 40px;
+    background: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card .order {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    transition: 1s ease all ;
+}
+
+.card:hover .order {
+    box-shadow: 0 0 0 220px aqua;
+}
