@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css effects</title>
+    <style>
+        *{
+            padding: 0;
+            border: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{           
+            width: 100vw;
+            height: 100vh;   
+        }
+        nav{
+            padding: 20px 0;
+        }
+        nav li{
+            padding: 10px 0;
+        }
+        .left{
+            width: 160px;
+            padding:0 10px;
+            height: 100%;
+            border-right: 1px solid #ccc;
+            background-color: cadetblue;
+            float: left;
+        }
+        iframe{
+            width: calc(100% - 160px);
+            height: 100%;
+            float: left;
+        }
+        .comment{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#splitScreen" data-href="./splitScreen.html">屏幕分割</a>
+                </li>
+                <li>
+                    <a href="#creativeButton" data-href="./creativeButton.html">闪光边框</a>
+                </li>
+                <li>
+                    <a href="#cssCard" data-href="./cssCard.html">卡片遮罩</a>
+                </li>
+                <li>
+                    <a href="#flipButton" data-href="./flipButton.html">3d按钮</a>
+                </li>
+                <li>
+                    <a href="#glowingIcon" data-href="./glowingIcon.html">阴影</a>
+                </li>
+                <li>
+                    <a href="#rotateImg" data-href="./rotateImg.html">图片旋转</a>
+                </li>
+                <li>
+                    <a href="#serviceBox" data-href="./serviceBox.html">boxShadow</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="comment">
+            <h2>必要说明</h2>
+            <p>这里的特效, 目的仅是收藏和实现,所以没有考虑兼容性.</p>
+        </div>
+    </div>
+    <iframe src="./splitScreen.html" frameborder="0"></iframe>
+
+    <script>
+        function relocateIframe() {
+            var iframe = document.body.querySelector("iframe");
+            var hash = location.hash || "#splitScreen";
+            var tagA = document.querySelector('a[href="' + hash + '"]');
+            var srcUrl = tagA.getAttribute("data-href");
+            iframe.src = srcUrl;
+        }
+
+        relocateIframe();
+        window.onhashchange = function () {
+            relocateIframe();
+        }
+    </script>
+</body>
+</html>
